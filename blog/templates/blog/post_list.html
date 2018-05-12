@@ -1,9 +1,14 @@
 <html>
     <head>
-        <title>Ola's blog</title>
+        <title>crazytb's blog</title>
     </head>
     <body>
-        <p>Hi there!</p>
-        <p>It works!</p>
+        {% for post in posts %}
+            <div>
+                <p>Published: {{ post.publised_date }}</p>
+                <h1> <a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
     </body>
 </html>
